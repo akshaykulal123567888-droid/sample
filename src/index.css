@@ -24,3 +24,15 @@ html, body, #root {
   -webkit-text-fill-color: transparent;
 }
 
+@media (pointer: fine) {
+  html, body {
+    cursor: none;
+  }
+  a, button, [role="button"], [data-cursor], .cursor-pointer {
+    cursor: none !important;
+  }
+  input, textarea {
+    cursor: text;
+  }
+}
+

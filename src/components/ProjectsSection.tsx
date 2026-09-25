@@ -114,39 +114,47 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* Left Column: 40% width (4 / 10 cols) with 2 stacked images */}
           <div className="md:col-span-4 flex flex-col gap-4 sm:gap-6">
             <div
+              data-cursor="project"
+              onClick={() => onOpenProject(project)}
               style={{ height: 'clamp(130px, 16vw, 230px)' }}
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#161616]"
+              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#161616] cursor-pointer group"
             >
               <img
                 src={project.images.col1Top}
                 alt={`${project.name} preview one`}
                 loading="lazy"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div
+              data-cursor="project"
+              onClick={() => onOpenProject(project)}
               style={{ height: 'clamp(160px, 22vw, 340px)' }}
-              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#161616]"
+              className="w-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#161616] cursor-pointer group"
             >
               <img
                 src={project.images.col1Bottom}
                 alt={`${project.name} preview two`}
                 loading="lazy"
                 referrerPolicy="no-referrer"
-                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </div>
 
           {/* Right Column: 60% width (6 / 10 cols) with 1 tall image */}
-          <div className="md:col-span-6 h-full min-h-[280px] sm:min-h-[340px] md:min-h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#161616]">
+          <div
+            data-cursor="project"
+            onClick={() => onOpenProject(project)}
+            className="md:col-span-6 h-full min-h-[280px] sm:min-h-[340px] md:min-h-full rounded-[40px] sm:rounded-[50px] md:rounded-[60px] overflow-hidden bg-[#161616] cursor-pointer group"
+          >
             <img
               src={project.images.col2}
               alt={`${project.name} highlight render`}
               loading="lazy"
               referrerPolicy="no-referrer"
-              className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
           </div>
         </div>

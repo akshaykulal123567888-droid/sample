@@ -11,6 +11,7 @@ import ServicesSection from './components/ServicesSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactModal from './components/ContactModal';
 import ProjectModal, { ProjectData } from './components/ProjectModal';
+import CustomCursor from './components/CustomCursor';
 import { ArrowUp } from 'lucide-react';
 
 export default function App() {
@@ -26,6 +27,9 @@ export default function App() {
       style={{ overflowX: 'clip' }}
       className="bg-[#0C0C0C] text-[#D7E2EA] font-sans min-h-screen relative selection:bg-[#B600A8] selection:text-white"
     >
+      {/* Custom Circular Cursor */}
+      <CustomCursor />
+
       {/* 1. Hero Section */}
       <HeroSection onContactClick={() => setIsContactOpen(true)} />
 

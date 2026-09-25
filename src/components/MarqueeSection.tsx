@@ -72,7 +72,7 @@ export const MarqueeSection: React.FC = () => {
           {row1Images.map((src, index) => (
             <div
               key={`row1-${index}`}
-              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#181818] border border-white/5"
+              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#181818] border border-white/5 cursor-pointer"
             >
               <img
                 src={src}
@@ -96,7 +96,7 @@ export const MarqueeSection: React.FC = () => {
           {row2Images.map((src, index) => (
             <div
               key={`row2-${index}`}
-              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#181818] border border-white/5"
+              className="w-[420px] h-[270px] shrink-0 rounded-2xl overflow-hidden bg-[#181818] border border-white/5 cursor-pointer"
             >
               <img
                 src={src}
